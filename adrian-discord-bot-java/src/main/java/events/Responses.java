@@ -8,7 +8,7 @@ public class Responses extends ListenerAdapter {
 	@Override
 	public void onMessageReceived(MessageReceivedEvent event) {
 		String messageSent = event.getMessage().getContentRaw();
-		if(messageSent.equalsIgnoreCase("Adrian")) {
+		if(messageSent.equalsIgnoreCase("test")) {
 			event.getChannel().sendMessage("Meow!").queue();
 		}
 //		if(!event.isFromGuild()) return;

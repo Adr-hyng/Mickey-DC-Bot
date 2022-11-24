@@ -10,7 +10,7 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 
 public class AdrianBot {
 	public static void main(String[] args) throws LoginException {
-		JDA bot = JDABuilder.createDefault("MTA0NDYyNTA0ODY3OTQ4MTQ1NA.Gda22U.mFw7yFfXxy0YDiVZRgo5FWNmx5JSdqkAZv5-tU")
+		JDA bot = JDABuilder.createDefault("TOKEN")
 				.setActivity(Activity.playing("with your mom"))
 				.enableIntents(GatewayIntent.MESSAGE_CONTENT)
 				.build();
