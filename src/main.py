@@ -4,7 +4,6 @@ import time
 
 from command_handler import client, channel, credentials, tree, guild_tick # Main --> Command Handler
 
-
 @client.event
 async def on_ready():
     await tree.sync(guild=discord.Object(id = credentials.GUILD_ID.value))
