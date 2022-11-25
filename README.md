@@ -24,7 +24,7 @@
     <a href="https://wakatime.com/badge/user/2b15268d-87f2-4d8d-b82b-595c8c66cfd8/project/161579db-52d1-49a7-8140-b751d60da5e9"><img src="https://wakatime.com/badge/user/2b15268d-87f2-4d8d-b82b-595c8c66cfd8/project/161579db-52d1-49a7-8140-b751d60da5e9.svg" alt="wakatime">
     </a>
     <br>
-    <a href="https://wakatime.com/badge/user/2b15268d-87f2-4d8d-b82b-595c8c66cfd8/project/161579db-52d1-49a7-8140-b751d60da5e9"><img src="https://img.shields.io/badge/dynamic/json?color=blue&label=status&query=status&url=https%3A%2F%2Fraw.githubusercontent.com%2FAdr-hyng%2FMickey-DC-Bot%2Fmain%2Fassets%2Fstatus.json" alt="status">
+    <a href="https://wakatime.com/badge/user/2b15268d-87f2-4d8d-b82b-595c8c66cfd8/project/161579db-52d1-49a7-8140-b751d60da5e9"><img src="https://img.shields.io/badge/dynamic/json?color=blue&label=status&query=status&url=https%3A%2F%2Fraw.githubusercontent.com%2FAdr-hyng%2FMickey-DC-Bot%2Fmain%2Fstatus.json" alt="status">
     </a>
 </p>
 
