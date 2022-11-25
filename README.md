@@ -2,7 +2,7 @@
 
 <p align="center">
 <a href="">
-    <img src="https://o.remove.bg/downloads/ac4403cb-bad9-4f7d-856b-e7fbcf62413c/mickey-removebg-preview.png" height="50%" width="50%">
+    <img src="./assets/mickey.png" height="50%" width="50%">
 </a></p>
 
 <p align="center">
@@ -24,7 +24,7 @@
     <a href="https://wakatime.com/badge/user/2b15268d-87f2-4d8d-b82b-595c8c66cfd8/project/161579db-52d1-49a7-8140-b751d60da5e9"><img src="https://wakatime.com/badge/user/2b15268d-87f2-4d8d-b82b-595c8c66cfd8/project/161579db-52d1-49a7-8140-b751d60da5e9.svg" alt="wakatime">
     </a>
     <br>
-    <a href="https://wakatime.com/badge/user/2b15268d-87f2-4d8d-b82b-595c8c66cfd8/project/161579db-52d1-49a7-8140-b751d60da5e9"><img src="https://img.shields.io/badge/dynamic/json?color=blue&label=status&query=status&url=https%3A%2F%2Fraw.githubusercontent.com%2FAdr-hyng%2FAdrian-Discord-Bot%2Fmain%2Fadrian-discord-bot-py%2Fassets%2Fapplication.json%3Ftoken%3DGHSAT0AAAAAAB3QISMHDSVKRDZOVSBWNCV6Y372UWQ" alt="wakatime">
+    <a href="https://wakatime.com/badge/user/2b15268d-87f2-4d8d-b82b-595c8c66cfd8/project/161579db-52d1-49a7-8140-b751d60da5e9"><img src="https://img.shields.io/badge/dynamic/json?color=blue&label=status&query=status&url=https%3A%2F%2Fraw.githubusercontent.com%2FAdr-hyng%2FMickey-DC-Bot%2Fmain%2Fassets%2Fstatus.json" alt="status">
     </a>
 </p>
 
