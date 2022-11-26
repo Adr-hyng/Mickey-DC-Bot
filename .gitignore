@@ -1,5 +1,4 @@
 .env
-assets/
 src/__pycache__/
 test.py
 venv/

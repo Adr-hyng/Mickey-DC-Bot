@@ -2,7 +2,7 @@
 
 <p align="center">
 <a href="">
-    <img src="./assets/mickey.png" height="50%" width="50%">
+    <img src="./assets/readme/mickey.png" height="50%" width="50%">
 </a></p>
 
 <p align="center">
