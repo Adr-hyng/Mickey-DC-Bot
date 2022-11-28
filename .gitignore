@@ -1,8 +1,2 @@
 .env
 src/__pycache__/
-test.py
-venv/
-.replit
-poetry.lock
-pyproject.toml
-replit.nix
