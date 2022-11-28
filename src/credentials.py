@@ -13,7 +13,7 @@ class Credentials(Enum):
     GUILD_ID = int(os_environ("GUILD_ID"))
 
 class Channel(Enum):
-    BOT_TESTING = int(os_environ("C_BOT_TESTING"))
+    OUTPUT = int(os_environ("C_OUTPUT"))
     STATISTICS = int(os_environ("C_STATISTICS"))
     ONLINE = int(os_environ("C_ONLINE"))
     

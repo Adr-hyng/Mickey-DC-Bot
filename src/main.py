@@ -10,8 +10,9 @@ async def on_ready():
   await tree.sync(guild=discord.Object(id=credentials.GUILD_ID.value))
   await client.change_presence(activity=discord.Game(name="with your mom!"))
   today_time = f"{time.strftime('%I:%M %p')} at {datetime.today().strftime('%B %d, %Y')}"
-  await client.get_channel(channel.BOT_TESTING.value
+  await client.get_channel(channel.OUTPUT.value
                            ).send(f"Just logged in: {today_time}")
+  print("Just logged in")
   guild_tick.start()
 
 
@@ -20,7 +21,7 @@ async def on_message(message):
   if message.author == client.user: return
 
   if message.content == "-test_bot":
-    await client.get_channel(channel.BOT_TESTING.value).send("Bot Working")
+    await client.get_channel(channel.OUTPUT.value).send("Bot Working")
 
 
 #python discord bot code above ^^
