@@ -15,8 +15,8 @@
     <a href="https://www.python.org/downloads/">
     <img alt="python-version" src="https://img.shields.io/badge/python-3.9-blue">
     </a>
-    <a href="https://github.com/Rapptz/discord.py/">
         <img src="https://img.shields.io/badge/discord.py-2.1.0-blue" alt="discord.py">
+    <a href="https://github.com/Rapptz/discord.py/">
     </a>
     <a href="https://pypi.org/project/python-dotenv/">
     <img src="https://img.shields.io/badge/dotenv-0.21.0-blue" alt="python-dotenv">

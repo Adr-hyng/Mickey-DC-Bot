@@ -1,8 +1,15 @@
+from flask import Flask
 import discord
 from datetime import datetime
 import time
 
-from command_handler import client, channel, credentials, tree, guild_tick  # Main --> Command Handler
+# Main --> Command Handler
+from command_handler import (client, 
+                             channel, 
+                             credentials, 
+                             tree, 
+                             guild_tick,
+                             dota2_match_finder)
 
 
 @client.event
@@ -14,18 +21,19 @@ async def on_ready():
                            ).send(f"Just logged in: {today_time}")
   print("Just logged in")
   guild_tick.start()
+  dota2_match_finder.start()
 
 
 @client.event
 async def on_message(message):
-  if message.author == client.user: return
+  if message.author == client.user:
+    return
 
   if message.content == "-test_bot":
     await client.get_channel(channel.OUTPUT.value).send("Bot Working")
 
 
 #python discord bot code above ^^
-from flask import Flask
 
 app = Flask(__name__)
 
