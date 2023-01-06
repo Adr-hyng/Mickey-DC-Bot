@@ -15,13 +15,13 @@
     <a href="https://www.python.org/downloads/">
     <img alt="python-version" src="https://img.shields.io/badge/python-3.9-blue">
     </a>
-    <a href="https://github.com/Rapptz/discord.py/">
         <img src="https://img.shields.io/badge/discord.py-2.1.0-blue" alt="discord.py">
+    <a href="https://github.com/Rapptz/discord.py/">
     </a>
     <a href="https://pypi.org/project/python-dotenv/">
     <img src="https://img.shields.io/badge/dotenv-0.21.0-blue" alt="python-dotenv">
     </a>
-    <a href="https://wakatime.com/badge/user/2b15268d-87f2-4d8d-b82b-595c8c66cfd8/project/161579db-52d1-49a7-8140-b751d60da5e9"><img src="https://wakatime.com/badge/user/2b15268d-87f2-4d8d-b82b-595c8c66cfd8/project/161579db-52d1-49a7-8140-b751d60da5e9.svg" alt="wakatime">
+    <a href="https://wakatime.com/badge/user/2b15268d-87f2-4d8d-b82b-595c8c66cfd8/project/74b3e878-3e97-489f-9ee3-50be6b682127"><img src="https://wakatime.com/badge/user/2b15268d-87f2-4d8d-b82b-595c8c66cfd8/project/74b3e878-3e97-489f-9ee3-50be6b682127.svg" alt="wakatime">
     </a>
     <br>
     <a href="https://wakatime.com/badge/user/2b15268d-87f2-4d8d-b82b-595c8c66cfd8/project/161579db-52d1-49a7-8140-b751d60da5e9"><img src="https://img.shields.io/badge/dynamic/json?color=blue&label=status&query=status&url=https%3A%2F%2Fraw.githubusercontent.com%2FAdr-hyng%2FMickey-DC-Bot%2Fmain%2Fstatus.json" alt="status">
