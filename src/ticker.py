@@ -53,7 +53,6 @@ async def dota2_match_finder():
             if auto_accept_permission:
                 await handler._click_accept()
                 handler.engine.endLoop()
-            # await asyncio.sleep(0)
             await asyncio.sleep(2)
                 
 
