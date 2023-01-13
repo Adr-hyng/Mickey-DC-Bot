@@ -4,6 +4,30 @@ import asyncio
 import json
 import uuid
 
+import numpy as np
+import cv2 as cv
+from PIL import ImageGrab, Image
+
+icon_mode = "laptop"
+icon_path = f"../assets/dota2/accept_icon_{icon_mode}.jpg"
+screen_size = pyautogui.size()
+REGION = (0, 0, screen_size[0], screen_size[1])
+
+ACCEPT_PICTURE_PIL = Image.open(icon_path)
+ACCEPT_PICTURE_CV = cv.imread(icon_path)
+
+def check_image_exists():
+    img = ImageGrab.grab(bbox = REGION )
+    img_cv = cv.cvtColor(np.array(img), cv.COLOR_RGB2BGR)
+    res = cv.matchTemplate(img_cv, ACCEPT_PICTURE_CV, cv.TM_CCOEFF_NORMED)
+    conf = (res >= 0.8)
+    width, height = ACCEPT_PICTURE_PIL.size
+    loc = np.where(conf)
+    for pt in zip(*loc[::-1]):
+        if conf.any():
+            return (pt[0], pt[1], width, height), True
+    return (0, 0, width, height), False
+
 class Dota2:
     def __init__(self):
         self.engine = pyttsx3.init()
@@ -21,18 +45,18 @@ class Dota2:
         self.engine.say(f"  {text} ")
         self.engine.runAndWait()
         
+        
     async def _await_match(self):
-        # print("Running")
-        icon = pyautogui.locateOnScreen("../assets/dota2/accept_icon2.jpg", confidence = 0.9)
-        if icon:
-            self._mouse_position = pyautogui.center(icon)
+        icon_coords, isFound = check_image_exists()
+        if isFound:
+            self._mouse_position = pyautogui.center(icon_coords)
             return True
         await asyncio.sleep(0)
                 
         
     async def _click_accept(self):
-        pyautogui.moveTo(self._mouse_position)
-        pyautogui.click(self._mouse_position) 
+        pyautogui.moveTo(self._mouse_position, _pause = False)
+        pyautogui.click(self._mouse_position, _pause = False) 
         # Read Data in Json File
         with open("../status.json") as fr:
             data = dict(json.load(fr))

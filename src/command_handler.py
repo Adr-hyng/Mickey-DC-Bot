@@ -24,25 +24,40 @@ async def test(interaction: D_Interaction):
 
 # /icpep dota2 accept:boolean
 @tree.command(name=f"icpep-dota2", description="Fun Dota 2 Commands", guild=D_Object(id=credentials.GUILD_ID.value))
-@app_commands.describe(accept="Accept the match or not?", status="Show Dota 2 Database")
-async def dota2_accept(interaction: D_Interaction, accept: Optional[bool] = None, status: Optional[Literal["show"]] = None):
+@app_commands.describe(auto_accept="Accept the match or not?", status="Show Dota 2 Database", wait_match="Boolean flag for detect match found")
+async def dota2_accept(interaction: D_Interaction, auto_accept: Optional[bool] = None, status: Optional[Literal["show"]] = None, wait_match: Optional[bool] = None):
     await interaction.response.defer()
     
-    if accept is not None:
+    if wait_match is not None:
+        with open("../status.json") as fr:
+            data = dict(json.load(fr))
+    
+        # Overwrite Auto Accept depending on what user wants
+        temp_before = data.get("wait_match")
+        data["wait_match"] = wait_match
+        
+        # Save it
+        with open("../status.json", 'w') as fw:
+            json.dump(data, fw, indent = 2)
+            
+        # Feedback
+        await interaction.followup.send(f"Update: Match Found detection from {'ON' if temp_before else 'OFF'} to {'ON' if wait_match else 'OFF'}")
+    
+    if auto_accept is not None:
         # Read Data in Json File
         with open("../status.json") as fr:
             data = dict(json.load(fr))
     
         # Overwrite Auto Accept depending on what user wants
         before_accept = data.get("auto_accept")
-        data["auto_accept"] = accept
+        data["auto_accept"] = auto_accept
             
         # Save it
         with open("../status.json", 'w') as fw:
             json.dump(data, fw, indent = 2)
         
         # Feedback
-        await interaction.followup.send(f"Update: Auto Accept from {before_accept} to {accept}")
+        await interaction.followup.send(f"Update: Auto Accept from {before_accept} to {auto_accept}")
         
     if status is not None:
         # Read Data in Json File
@@ -50,8 +65,6 @@ async def dota2_accept(interaction: D_Interaction, accept: Optional[bool] = None
             data = dict(json.load(fr))
         
         text = str(data).replace("'", "\"").replace(",", ",\n\t").replace("}", "\n}").replace("{", "{\n\t ").replace("True", "true").replace("False", "false").replace("None", "null")
-        
-        print(f'Status: \n```json\n{text}\n```')
         
         # Feedback
         await interaction.followup.send(f'Status: \n```json\n{text}\n```')

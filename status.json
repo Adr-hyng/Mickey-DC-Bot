@@ -1,6 +1,6 @@
 {
   "status": "online",
-  "auto_accept": false,
-  "wait_match": false,
-  "current_match_id": "55c4e5a5-9d05-4641-aee8-128bb391e22b"
+  "auto_accept": true,
+  "wait_match": true,
+  "current_match_id": "4db8e916-0dc7-42a8-94d2-115e6eabda7e"
 }

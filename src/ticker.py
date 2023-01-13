@@ -6,6 +6,7 @@ from dota2_command import Dota2
 
 import json
 import asyncio
+import threading
 
 client = DiscordBot.client.value
 tree = DiscordBot.tree.value
@@ -32,7 +33,7 @@ async def before():
  
  
 # Dota 2 Match Run Looper
-@tasks.loop(seconds=2)
+@tasks.loop(seconds=0.1)
 async def dota2_match_finder():
     
     auto_accept_permission = False
@@ -46,10 +47,13 @@ async def dota2_match_finder():
         handler = Dota2()
         await handler.run()
         if handler.match_found:
-            handler._speak("A match has been found")
+            t = threading.Thread(target=handler._speak, args=("A match has been found",), daemon=True)
+            t.start()
             await client.get_channel(1046039940540145734).send(f">>> **Dota 2**: Match Found \n**ID**: {curr_match_id}")
             if auto_accept_permission:
                 await handler._click_accept()
+                handler.engine.endLoop()
+            # await asyncio.sleep(0)
             await asyncio.sleep(2)
                 
 
